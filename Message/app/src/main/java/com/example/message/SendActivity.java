@@ -1,4 +1,4 @@
-package com.example.message;
+package com.example.message80;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,10 +12,10 @@ public class SendActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
-
-        EditText et_msg = et_msg.getText();
+        EditText et_msg = findViewById(R.id.et_msg);
+        String msg = et_msg.getText().toString();
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putParcelableArrayListExtra(Intent.EXTRA_TEXT, msg);
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
     }
 }
