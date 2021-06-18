@@ -15,30 +15,27 @@
         android:textSize="56sp" />
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:onClick="start"
         android:text="@string/start" />
 
     <Button
-        android:id="@+id/stop"
+        android:id="@+id/btn_stop"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:onClick="stop"
         android:text="@string/stop" />
 
     <Button
-        android:id="@+id/reset"
+        android:id="@+id/btn_reset"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:onClick="reset"
         android:text="@string/reset"/>
 
 </LinearLayout>

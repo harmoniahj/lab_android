@@ -12,19 +12,44 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class AfterActivity extends AppCompatActivity implements ActionListener {
+public class AfterActivity extends AppCompatActivity {
     private int seconds = 0; // 스톱워치에 표시할 초
-    private boolean running; // 스톱워치가 실행 중인지 확인
+    private boolean running; // 스톱워치가 실행 중인지 확인 : false → 시작버튼 클릭 → true
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // Bundle : Activity상태를 저장하고 있으므로 안드로이드 OS시스템에서 상태를 저장하고 관리할수 있는 API
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_after);
 
         if(savedInstanceState != null) {
             seconds = savedInstanceState.getInt("seconds", seconds);
             running = savedInstanceState.getBoolean("running", running);
         }
+
+        Button btn_start = findViewById(R.id.btn_start);
+        btn_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                running = true;
+            }
+        });
+
+        Button btn_stop = findViewById(R.id.btn_stop);
+        btn_stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                running = false;
+            }
+        });
+
+        Button btn_reset = findViewById(R.id.btn_reset);
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                running = false;
+                seconds = 0;
+            }
+        });
     }
 
     // 이전상태를 저장하는 코드 필요
@@ -68,12 +93,4 @@ public class AfterActivity extends AppCompatActivity implements ActionListener {
             }
         });
     } // runTimer
-
-    @Override
-    public void OnClick(View v) {
-        Button btn = findViewById(R.id.btn_start);
-        if(btn.equals(v.getId())) {
-            Log.i("", btn.getText().toString());
-        }
-    }
 }
