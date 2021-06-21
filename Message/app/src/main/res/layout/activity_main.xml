@@ -11,11 +11,14 @@
         android:id="@+id/et_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="메세지를 입력하세요" />
+        android:hint="메시지를 입력하세요"
+        android:ems="10" />
+
     <Button
         android:id="@+id/btn_send"
         android:text="Send Message"
         android:onClick="send"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
