@@ -31,8 +31,12 @@ public class LoginActivity extends AppCompatActivity {
     private static String sname = null;
     EditText et_id = null;
     EditText et_pw = null;
+<<<<<<< HEAD
     private Map<String, String> pmap = new HashMap<>();
 
+=======
+    private  Map<String,String> pmap = new HashMap<>();
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,29 +47,46 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(this.getClass().getName(),"로그인 버튼 호출 성공");
+<<<<<<< HEAD
               //  login();
+=======
+                //login();
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
                 loginProcess(pmap);
             }
         });
     }
 
+<<<<<<< HEAD
     public void onStart() {
+=======
+    public void onStart(){
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
         super.onStart();
         et_id = findViewById(R.id.et_id);
         et_pw = findViewById(R.id.et_pw);
         String id = et_id.getText().toString();
         String pw = et_pw.getText().toString();
+<<<<<<< HEAD
         pmap.put("mem_id", isDestroyed());
         pmap.put("mem_pw", isDestroyed());
     }
 
     // 사용자로부터 받아온 값 파라미터로 넘겨 받음
     public void loginProcess(Map<String, String> pmap) {
+=======
+        pmap.put("mem_id", id);
+        pmap.put("mem_pw",pw);
+    }
+    //사용자로 부터 받아온 값 파라미터로 넘겨 받음
+    public void loginProcess(Map<String,String> pmap){
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
         VolleyQueueProvider.initRequestQueue(this);
         VolleyQueueProvider.openQueue();
         VolleyQueueProvider.callbackVolley(new VolleyCallback() {
             @Override
             public void onResponse(String response) {
+<<<<<<< HEAD
                 // [{"mem_id":"test", "mem_name":"김유신"}]
                List<Map<String, Object>> resultList = new Gson().fromJson(response, List.class);
                if(resultList.size()  == 0) {
@@ -85,13 +106,43 @@ public class LoginActivity extends AppCompatActivity {
                }
             }
 
+=======
+                //[{"mem_id":"test","mem_name":"김유신"}]
+                List<Map<String,Object>> resultList = new Gson().fromJson(response,List.class);
+                if(resultList.size() == 0){
+                    Toast.makeText(getApplicationContext()
+                                  , "아이디가 존재하지 않습니다."
+                                  , Toast.LENGTH_LONG).show();
+                }else if(resultList.get(0).get("mem_name").equals("-1")){
+                    Toast.makeText(getApplicationContext()
+                            , "비밀번호가 일치하지 않습니다."
+                            , Toast.LENGTH_LONG).show();
+                }else{
+                    for(Map.Entry dtoTOMap : resultList.get(0).entrySet()){
+                        if( dtoTOMap.getKey().equals("mem_name")){
+                            MemberDTO.getInstance().setMem_name(dtoTOMap.getValue().toString());continue;
+                        }
+                    }///////////////end of for
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    intent.putExtra("sname", MemberDTO.getInstance().getMem_name());
+                    startActivity(intent);
+                    Toast.makeText(getApplicationContext()
+                            , MemberDTO.getInstance().getMem_name()+"님 환영합니다."
+                            , Toast.LENGTH_LONG).show();
+                }/////////////end of else
+            }
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("error", error.toString());
             }
         }, "login/jsonLogin", pmap);
+<<<<<<< HEAD
     }
 
+=======
+    }///////////////////end of loginProcess
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
     public void login(){
         Log.i(this.getClass().getName(),"login() 호출 성공");
         EditText et_id = findViewById(R.id.et_id);

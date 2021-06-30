@@ -12,16 +12,25 @@ import com.android.volley.toolbox.RequestFuture;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import java.util.Map;
+<<<<<<< HEAD
 
 public final class VolleyQueueProvider {
     private VolleyQueueProvider() {
     }
 
+=======
+public final class VolleyQueueProvider {
+    private VolleyQueueProvider() {
+    }
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
     public static Context app = null;
     private static class LazyHolder {
         private static final RequestQueue requestQueue = Volley.newRequestQueue(app);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
     public static RequestQueue initRequestQueue(Context context) {
         if (context != null) {
             app = context;
@@ -46,7 +55,11 @@ public final class VolleyQueueProvider {
     }
     public static void callbackVolley(@NonNull final VolleyCallback volleyCallBack, String path, final Map<String, String> pMap) {
         Object result;
+<<<<<<< HEAD
         final String url = "http://172.30.1.36:8000/" + path + ".jsp";
+=======
+        final String url = "http://192.168.0.244:7000/" + path;
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
 //        final String url = "http://172.30.1.18:8000/android/androidOracleConnection.jsp";
         Log.e("url: ", url);
         try {
@@ -77,4 +90,8 @@ public final class VolleyQueueProvider {
             Log.e("error", e.toString());
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d968ed16f89bcdbf2db9385a3f3d1c4e2ff84af1
