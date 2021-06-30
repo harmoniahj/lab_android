@@ -1,0 +1,2 @@
+rootProject.name = "TerrGym80"
+include ':app'
