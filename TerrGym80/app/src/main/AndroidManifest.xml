@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TerrGym80"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ResListActivity"></activity>
+        <activity android:name=".MapActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".HelpActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ResListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

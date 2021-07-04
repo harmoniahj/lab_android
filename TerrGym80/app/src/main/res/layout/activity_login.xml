@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/gym"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="120dp" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TERRGYM PT"
+            android:textSize="40dp"
+            android:textColor="@color/pt_head"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="345dp" />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etm_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/terrgym"
+                    android:hint="ID"
+                    android:textColorHint="@color/terrgym"
+                    />
+                <EditText
+                    android:id="@+id/etm_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/terrgym"
+                    android:hint="Password"
+                    android:textColorHint="@color/terrgym"
+                    android:inputType="textPassword"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Login"
+                android:onClick="loginInit"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_login"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
