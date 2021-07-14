@@ -1,0 +1,2 @@
+rootProject.name = "NDS"
+include ':app'
