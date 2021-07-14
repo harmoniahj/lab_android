@@ -27,27 +27,30 @@ class MyWalletActivity : AppCompatActivity() {
         binding.coinTransRecyclerView.adapter = adapter
 
         var retrofit = Retrofit.Builder()
-            .baseUrl("192.168.0.62:9696/myPage/my_wallet.nds")
+            .baseUrl("http://192.168.0.24:9696")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         coinTransService = retrofit.create(CoinTransService::class.java)
 
-        coinTransService.getcoinTrans("mem_email")
-            .enqueue(object: Callback<CoinTrans> {
+        coinTransService.getcoinTrans("banana@good.com")
+            .enqueue(object: Callback<List<CoinTrans>>{
                 override fun onResponse(
-                    call: Call<CoinTrans>,
-                    response: Response<CoinTrans>
+                    call: Call<List<CoinTrans>>,
+                    response: Response<List<CoinTrans>>
                 ) {
                     if(response.isSuccessful.not()){
                         Log.e(TAG, "NOT!!! SUCCESS")
                         return;
                     }
-                //    adapter.submitList(response.body()?.transNo.orEmpty())
+                    Log.e(TAG, "성공!")
+                    Log.e(TAG, "${response.body()}")
+                    adapter.submitList(response.body()?.orEmpty())
                 }
 
-                override fun onFailure(call: Call<CoinTrans>, t: Throwable) {
+                override fun onFailure(call: Call<List<CoinTrans>>, t: Throwable) {
                     // 실패처리
+                    Log.e(TAG, "실패...")
                     Log.e(TAG, t.toString())
                 }
             })

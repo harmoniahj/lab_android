@@ -6,8 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface CoinTransService {
-    @GET("192.168.0.62:9696/myPage/my_wallet.nds")
+    @GET("/myPage/my_WalletAndroid.nds")
     fun getcoinTrans(
         @Query("mem_email") mem_email: String
-    ): Call<CoinTrans>
+    ): Call<List<CoinTrans>>
 }

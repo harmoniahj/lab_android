@@ -3,10 +3,10 @@ package com.example.nds.model
 import com.google.gson.annotations.SerializedName
 
 data class CoinTrans (
-    @SerializedName("transNo") val transNo: Int,
-    @SerializedName("transDate") val transDate: String,
-    @SerializedName("transContent") val transContent: String,
-    @SerializedName("transPrice") val transPrice: Int,
-    @SerializedName("transRemain") val transRemain: Int,
-    @SerializedName("transIo") val transIo: String
+//    @SerializedName("TRANS_NO") val transNo: Int,
+    @SerializedName("TRANS_DATE") val transDate: String,
+    @SerializedName("TRANS_CONTENT") val transContent: String,
+    @SerializedName("TRANS_PRICE") val transPrice: String,
+    @SerializedName("TRANS_REMAIN") val transRemain: String,
+    @SerializedName("TRANS_IO") val transIo: String
 )

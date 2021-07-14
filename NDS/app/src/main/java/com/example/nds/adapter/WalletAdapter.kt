@@ -39,7 +39,7 @@ class WalletAdapter: ListAdapter<CoinTrans, WalletAdapter.CoinViewHolder>(diffUt
 
             // 내용이 같은지 체크
             override fun areContentsTheSame(oldItem: CoinTrans, newItem: CoinTrans): Boolean {
-                return oldItem.transNo == newItem.transNo
+                return oldItem.transDate == newItem.transDate
             }
         }
     }
