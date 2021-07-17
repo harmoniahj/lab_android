@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 import com.example.nds.adapter.MyLikeAdapter
-import com.example.nds.api.MyLikeService
+import com.example.nds.service.MyLikeService
 import com.example.nds.databinding.ActivityMyLikeBinding
 import com.example.nds.model.Mylike
 import retrofit2.*

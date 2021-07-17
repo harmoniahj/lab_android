@@ -12,14 +12,13 @@ import com.example.nds.model.TradeSell
 class TradeSellAdapter: ListAdapter<TradeSell, TradeSellAdapter.TradeSellViewHolder>(diffUtil) {
     inner class TradeSellViewHolder(private val binding: TradeSellBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(tradeSellModel: TradeSell) {
-            binding.bmNoTextView.text = tradeSellModel.bmNo
             binding.bmTitleTextView.text = tradeSellModel.bmTitle
             binding.bmDateTextView.text = tradeSellModel.bmDate
             binding.bmPriceTextView.text = tradeSellModel.bmPrice
 
             Glide
                 .with(binding.biFileImageView.context)
-                .load(tradeSellModel.biFile)
+                .load("http://192.168.0.24:9696/itemUpload/assets/img/itemupload/" + tradeSellModel.biFile)
                 .into(binding.biFileImageView)
         }
     }

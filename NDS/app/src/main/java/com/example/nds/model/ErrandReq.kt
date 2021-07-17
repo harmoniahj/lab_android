@@ -3,8 +3,8 @@ package com.example.nds.model
 import com.google.gson.annotations.SerializedName
 
 data class ErrandReq (
-    @SerializedName("errand_status") val errandStatus: String,
-    @SerializedName("errand_request_date") val errandRequestDate: String,
-    @SerializedName("errand_content") val errandContent: String,
-    @SerializedName("errand_total_price") val errandTotalPrice: String
+    @SerializedName("ERRAND_STATUS") val errandStatus: String,
+    @SerializedName("ERRAND_REQUEST_DATE") val errandRequestDate: String,
+    @SerializedName("ERRAND_CONTENT") val errandContent: String,
+    @SerializedName("ERRAND_TOTAL_PRICE") val errandTotalPrice: String
 )

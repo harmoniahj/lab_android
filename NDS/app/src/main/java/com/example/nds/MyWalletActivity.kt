@@ -2,12 +2,11 @@ package com.example.nds
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nds.adapter.WalletAdapter
-import com.example.nds.api.CoinTransService
+import com.example.nds.service.CoinTransService
 import com.example.nds.databinding.ActivityMyWalletBinding
 import com.example.nds.model.CoinTrans
 import retrofit2.*
@@ -22,8 +21,6 @@ class MyWalletActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMyWalletBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val getCoinTextView = findViewById<TextView>(R.id.getCoinTextView)
 
         adapter = WalletAdapter()
         binding.coinTransRecyclerView.layoutManager = LinearLayoutManager(this)

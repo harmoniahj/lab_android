@@ -9,7 +9,7 @@
     tools:context=".MyInfoActivity">
 
     <ImageView
-        android:id="@+id/mem_img"
+        android:id="@+id/memImgImageView"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:src="@drawable/ndschar"/>
@@ -56,7 +56,7 @@
                 android:textSize="20dp" />
 
             <RatingBar
-                android:id="@+id/rb_star"
+                android:id="@+id/memStarRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -77,6 +77,15 @@
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
+            <TextView
+                android:id="@+id/memEmailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="이메일"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
         </TableRow>
 
         <TableRow
@@ -88,6 +97,15 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@color/orange"
+                android:text="닉네임"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/memNicknameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="닉네임"
                 android:textColor="@color/black"
                 android:textSize="20dp" />

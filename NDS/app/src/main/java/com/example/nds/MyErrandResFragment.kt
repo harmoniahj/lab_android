@@ -9,14 +9,13 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.nds.adapter.ErrandResAdapter
-import com.example.nds.api.ErrandResService
-import com.example.nds.databinding.ErrandResBinding
+import com.example.nds.service.ErrandResService
 import com.example.nds.databinding.FragmentMyErrandResBinding
 import com.example.nds.model.ErrandRes
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 
-class MyErrandResFragment : Fragment() {
+class MyErrandResFragment : Fragment(R.layout.fragment_my_errand_res) {
     private lateinit var binding: FragmentMyErrandResBinding
     private lateinit var adapter: ErrandResAdapter
     private lateinit var errnadResService: ErrandResService
@@ -38,6 +37,8 @@ class MyErrandResFragment : Fragment() {
 
         errnadResService = retrofit.create(ErrandResService::class.java)
 
+        val view = binding.root
+
         errnadResService.getErrandRes("banana@good.com")
             .enqueue(object: Callback<List<ErrandRes>> {
                 override fun onResponse(
@@ -57,6 +58,6 @@ class MyErrandResFragment : Fragment() {
                 }
             })
 
-        return inflater.inflate(R.layout.fragment_my_errand_res, container, false)
+        return view
     }
 }
