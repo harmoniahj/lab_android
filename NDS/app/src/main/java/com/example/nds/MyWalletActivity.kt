@@ -35,7 +35,8 @@ class MyWalletActivity : AppCompatActivity() {
             .build()
 
         coinTransService = retrofit.create(CoinTransService::class.java)
-
+         
+        // 거래내역 불러오기
         coinTransService.getcoinTrans("banana@good.com")
             .enqueue(object: Callback<List<CoinTrans>>{
                 override fun onResponse(

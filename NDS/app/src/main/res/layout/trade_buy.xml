@@ -8,7 +8,7 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/TextView"
+        android:id="@+id/bmNoTextView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -18,11 +18,21 @@
         android:textSize="18dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/biFileImageView"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/bmTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="내용"
+        android:textAlignment="center"
+        android:textSize="18dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,7 +41,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/DateTextView"
+            android:id="@+id/bmDateTextView"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_gravity="center"
@@ -41,7 +51,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/CoinTextView"
+            android:id="@+id/bmPriceTextView"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_gravity="center"
@@ -51,7 +61,7 @@
             android:textSize="18dp" />
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/deleteBuyButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

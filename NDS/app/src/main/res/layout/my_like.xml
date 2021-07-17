@@ -4,25 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:padding="10dp"
+    android:padding="5dp"
+    android:background="@drawable/bg"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="글번호"
-        android:textAlignment="center"
-        android:textSize="18dp" />
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
+        android:id="@+id/biFileimageView"
+        android:layout_width="70dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/bmTitleTextView"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:text="내용"
+        android:textAlignment="center"
+        android:textSize="18dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,7 +33,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/DateTextView"
+            android:id="@+id/bmDateTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -42,7 +44,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/CoinTextView"
+            android:id="@+id/bmPriceTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
