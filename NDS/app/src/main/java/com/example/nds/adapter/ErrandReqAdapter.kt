@@ -13,7 +13,7 @@ class ErrandReqAdapter: ListAdapter<ErrandReq, ErrandReqAdapter.ErrandReqViewHol
         fun bind(errandModel: ErrandReq) {
             binding.errandStatusTextView.text = errandModel.errandStatus
             binding.errandRequestDateTextView.text = errandModel.errandRequestDate
-            binding.errandContentTextView.text = errandModel.errandContent
+            binding.errandContentTextView.text = errandModel.errandItem
             binding.errandTotalPriceTextView.text = errandModel.errandTotalPrice
         }
     }
@@ -37,7 +37,7 @@ class ErrandReqAdapter: ListAdapter<ErrandReq, ErrandReqAdapter.ErrandReqViewHol
 
             // 내용이 같은지 체크
             override fun areContentsTheSame(oldItem: ErrandReq, newItem: ErrandReq): Boolean {
-                return oldItem.errandRequestDate == newItem.errandRequestDate
+                return oldItem.memEmail == newItem.memEmail
             }
         }
     }

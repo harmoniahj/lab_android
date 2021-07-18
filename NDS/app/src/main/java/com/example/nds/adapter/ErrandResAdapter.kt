@@ -13,7 +13,7 @@ class ErrandResAdapter: ListAdapter<ErrandRes, ErrandResAdapter.ErrandResViewHol
         fun bind(errandModel: ErrandRes) {
             binding.errandStatusTextView.text = errandModel.errandStatus
             binding.errandRequestDateTextView.text = errandModel.errandRequestDate
-            binding.errandContentTextView.text = errandModel.errandContent
+            binding.errandContentTextView.text = errandModel.errandItem
             binding.errandTotalPriceTextView.text = errandModel.errandTotalPrice
             binding.memNicknameTextView.text = errandModel.memNickname
         }
@@ -38,7 +38,7 @@ class ErrandResAdapter: ListAdapter<ErrandRes, ErrandResAdapter.ErrandResViewHol
 
             // 내용이 같은지 체크
             override fun areContentsTheSame(oldItem: ErrandRes, newItem: ErrandRes): Boolean {
-                return oldItem.errandRequestDate == newItem.errandRequestDate
+                return oldItem.memEmail == newItem.memEmail
             }
         }
     }

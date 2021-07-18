@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ErrandResService {
-    @GET("myPage/my_errand.nds")
+    @GET("errand/selectErrandRecordAndroid.nds")
     fun getErrandRes(
         @Query("mem_email") mem_email: String
     ): Call<List<ErrandRes>>
