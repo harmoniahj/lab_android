@@ -35,7 +35,7 @@ class MyTradeBuyFragment : Fragment(R.layout.fragment_my_trade_buy) {
         binding.tradeBuyRecyclerView.adapter = adapter
 
         var retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.24:9696")
+            .baseUrl("http://192.168.1.166:9696")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

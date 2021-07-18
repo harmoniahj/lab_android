@@ -7,5 +7,6 @@ data class TradeSell (
     @SerializedName("BI_FILE") val biFile: String,
     @SerializedName("BM_CONTENT") val bmTitle: String,
     @SerializedName("BM_DATE") val bmDate: String,
-    @SerializedName("BM_PRICE") val bmPrice: String
+    @SerializedName("BM_PRICE") val bmPrice: String,
+    @SerializedName("BM_STATUS") val bmStatus: String
 )

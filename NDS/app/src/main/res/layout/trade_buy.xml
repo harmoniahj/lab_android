@@ -59,7 +59,7 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textAlignment="center"
-            android:textSize="18dp" />
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/deleteBuyButton"

@@ -1,5 +1,6 @@
 package com.example.nds.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -15,11 +16,23 @@ class TradeSellAdapter: ListAdapter<TradeSell, TradeSellAdapter.TradeSellViewHol
             binding.bmTitleTextView.text = tradeSellModel.bmTitle
             binding.bmDateTextView.text = tradeSellModel.bmDate
             binding.bmPriceTextView.text = tradeSellModel.bmPrice
+            binding.bmStatusTextView.text = tradeSellModel.bmStatus
 
             Glide
                 .with(binding.biFileImageView.context)
                 .load("http://192.168.0.24:9696/itemUpload/assets/img/itemupload/" + tradeSellModel.biFile)
                 .into(binding.biFileImageView)
+
+            if(tradeSellModel.bmStatus == "N") {
+                binding.bmStatusTextView.text = "판매중"
+                binding.bmStatusTextView.setBackgroundColor(Color.parseColor("#FFC107"))
+            } else if (tradeSellModel.bmStatus == "S") {
+                binding.bmStatusTextView.text = "거래중"
+                binding.bmStatusTextView.setBackgroundColor(Color.parseColor("#007BFD"))
+            } else if (tradeSellModel.bmStatus == "C") {
+                binding.bmStatusTextView.text = "판매완료"
+                binding.bmStatusTextView.setBackgroundColor(Color.parseColor("#EDA0C7"))
+            }
         }
     }
 

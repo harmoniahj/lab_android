@@ -59,6 +59,20 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/bmStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="진행상황"
+            android:gravity="center"
+            android:textAlignment="center"
             android:textSize="18dp" />
 
         <LinearLayout

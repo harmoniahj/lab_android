@@ -14,16 +14,16 @@
         <activity android:name=".InsertCoinActivity"></activity>
         <activity android:name=".MyLikeActivity" />
         <activity android:name=".MyWalletActivity"/>
-        <activity android:name=".MyTradeActivity" />
-        <activity android:name=".MyErrandActivity" />
-        <activity android:name=".UpdateNicknameActivity" />
-        <activity android:name=".MyInfoActivity" >
+        <activity android:name=".MyTradeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MyErrandActivity" />
+        <activity android:name=".UpdateNicknameActivity" />
+        <activity android:name=".MyInfoActivity" />
         <activity android:name=".MainActivity"></activity>
     </application>
 

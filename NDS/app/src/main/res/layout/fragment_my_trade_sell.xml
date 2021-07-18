@@ -22,7 +22,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/tv_tradeSell"
+            android:id="@+id/tradeSellAllTextView"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
