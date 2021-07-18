@@ -40,7 +40,7 @@ class MyErrandResFragment : Fragment(R.layout.fragment_my_errand_res) {
 
         val view = binding.root
 
-        // 판매내역 불러오기
+        // 내가 수행한 심부름 목록 불러오기
         errandResService.getErrandRes("banana@good.com")
             .enqueue(object: Callback<List<ErrandRes>>{
                 override fun onResponse(

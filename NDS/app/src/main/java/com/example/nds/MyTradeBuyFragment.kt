@@ -43,7 +43,7 @@ class MyTradeBuyFragment : Fragment(R.layout.fragment_my_trade_buy) {
 
         val view = binding.root
 
-        // 판매내역 불러오기
+        // 구매내역 불러오기
         tradeBuyService.getTradeBuy("바나나")
             .enqueue(object: Callback<List<TradeBuy>> {
                 override fun onResponse(

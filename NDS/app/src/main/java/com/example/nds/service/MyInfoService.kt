@@ -9,5 +9,5 @@ interface MyInfoService {
     @GET("member/jsonSelectMember.nds")
     fun getMyInfo(
         @Query("mem_email") mem_email: String
-    ): Call<List<MyInfo>>
+    ): Call<MyInfo>
 }

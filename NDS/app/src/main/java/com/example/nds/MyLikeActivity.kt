@@ -33,7 +33,7 @@ class MyLikeActivity : AppCompatActivity() {
 
         myLikeService = retrofit.create(MyLikeService::class.java)
 
-        // 거래내역 불러오기
+        // 내 찜 목록 불러오기
         myLikeService.getMyLike("water@good.com")
             .enqueue(object: Callback<List<Mylike>>{
                 override fun onResponse(
