@@ -17,6 +17,7 @@
         <TextView
             android:layout_width="55dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="전체 : "
             android:background="@color/maincol"
             android:textColor="@color/white"
@@ -26,9 +27,24 @@
             android:id="@+id/tv_errandRes"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textColor="@color/white"
             android:background="@color/maincol"
             android:textSize="20dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/red"
+            android:text="삭제"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -48,13 +64,13 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="구분"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="20dp"

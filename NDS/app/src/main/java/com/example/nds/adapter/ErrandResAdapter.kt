@@ -1,5 +1,7 @@
 package com.example.nds.adapter
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,6 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nds.databinding.ErrandResBinding
 import com.example.nds.model.ErrandRes
+import kotlin.coroutines.coroutineContext
 
 class ErrandResAdapter: ListAdapter<ErrandRes, ErrandResAdapter.ErrandResViewHolder>(diffUtil) {
     inner class ErrandResViewHolder(private val binding: ErrandResBinding): RecyclerView.ViewHolder(binding.root) {
@@ -16,6 +19,16 @@ class ErrandResAdapter: ListAdapter<ErrandRes, ErrandResAdapter.ErrandResViewHol
             binding.errandContentTextView.text = errandModel.errandItem
             binding.errandTotalPriceTextView.text = errandModel.errandTotalPrice
             binding.memNicknameTextView.text = errandModel.memNickname
+
+            if(errandModel.errandStatus == "P") {
+                binding.errandStatusTextView.text = "진행중"
+                binding.errandStatusTextView.setTextColor(Color.parseColor("#000000"))
+                binding.errandStatusTextView.setBackgroundColor(Color.parseColor("#FFC107"))
+            } else if (errandModel.errandStatus == "S") {
+                binding.errandStatusTextView.text = "완료"
+                binding.errandStatusTextView.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.errandStatusTextView.setBackgroundColor(Color.parseColor("#627EA4"))
+            }
         }
     }
 

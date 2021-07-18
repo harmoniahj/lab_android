@@ -1,5 +1,6 @@
 package com.example.nds.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -15,6 +16,16 @@ class ErrandReqAdapter: ListAdapter<ErrandReq, ErrandReqAdapter.ErrandReqViewHol
             binding.errandRequestDateTextView.text = errandModel.errandRequestDate
             binding.errandContentTextView.text = errandModel.errandItem
             binding.errandTotalPriceTextView.text = errandModel.errandTotalPrice
+
+            if(errandModel.errandStatus == "P") {
+                binding.errandStatusTextView.text = "진행중"
+                binding.errandStatusTextView.setTextColor(Color.parseColor("#000000"))
+                binding.errandStatusTextView.setBackgroundColor(Color.parseColor("#FFC107"))
+            } else if (errandModel.errandStatus == "S") {
+                binding.errandStatusTextView.text = "완료"
+                binding.errandStatusTextView.setTextColor(Color.parseColor("#FFFFFF"))
+                binding.errandStatusTextView.setBackgroundColor(Color.parseColor("#627EA4"))
+            }
         }
     }
 
